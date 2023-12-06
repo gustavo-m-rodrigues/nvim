@@ -4,9 +4,14 @@ return require('packer').startup(function(use)
 	use {
 		'wbthomason/packer.nvim',
 	}
-
+	
 	use {
-		"lewis6991/impatient.nvim",
+		"rebelot/kanagawa.nvim"
+	}	
+	
+	use {
+		'nvim-lualine/lualine.nvim',
+		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
 
 	use {
@@ -14,6 +19,11 @@ return require('packer').startup(function(use)
 		requires = {
 			"nvim-lua/plenary.nvim"
 		},
+	}
+
+	use {
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate"
 	}
 
 	use {
@@ -39,27 +49,11 @@ return require('packer').startup(function(use)
 	}
 
 	use {
-		"nvim-treesitter/nvim-treesitter",
-		run = ":TSUpdate"
-	}
-
-
-	use {
 		"ThePrimeagen/harpoon",
 		requires = {
 			"nvim-lua/plenary.nvim"
 		},
-	}
-
-
-	use {
-		'nvim-lualine/lualine.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-	}
-
-	use {
-		"ellisonleao/gruvbox.nvim"
-	}
+	}	
 
 	use {
 		"danymat/neogen",
